@@ -1,0 +1,25 @@
+.progress-intro {
+  color: #8290a5;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.progress-stats {
+  display: flex;
+  gap: 32px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #edf0f4;
+}
+
+.progress-stat-label {
+  display: block;
+  font-size: 12px;
+  color: #8290a5;
+  margin-bottom: 4px;
+}
+
+.progress-stats strong {
+  font-size: 18px;
+  color: #172033;
+}

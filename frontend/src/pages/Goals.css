@@ -1,0 +1,172 @@
+.goals-intro {
+  color: #8290a5;
+  font-size: 13px;
+  margin-bottom: 24px;
+}
+
+.goals-section-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #172033;
+  margin: 0 0 14px;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.profile-select-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.goal-field-icon.weight {
+  background: #e6f7f5;
+  color: #14b8a6;
+}
+
+.goal-field-icon.height {
+  background: #eef2ff;
+  color: #6366f1;
+}
+
+.goal-field-icon.age {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+.profile-select-grid select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #e9edf3;
+  font-size: 14px;
+  font-family: inherit;
+  color: #172033;
+  background: white;
+}
+
+.calculate-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 18px;
+  margin-bottom: 28px;
+  color: #168456;
+  background: #eaf8f1;
+  border: 0;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.calculate-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.calculate-button:not(:disabled):hover {
+  opacity: 0.85;
+}
+
+.goals-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.goal-field {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  border: 1px solid #edf0f4;
+  border-radius: 14px;
+}
+
+.goal-field-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.goal-field-icon.calories {
+  background: #fdecec;
+  color: #e0584a;
+}
+
+.goal-field-icon.protein {
+  background: #f1ecfd;
+  color: #9b7bea;
+}
+
+.goal-field-icon.carbs {
+  background: #fdf3e4;
+  color: #f2ae52;
+}
+
+.goal-field-icon.fat {
+  background: #fff3df;
+  color: #d99428;
+}
+
+.goal-field-icon.water {
+  background: #e7f4fd;
+  color: #57aee8;
+}
+
+.goal-field-body {
+  flex: 1;
+}
+
+.goal-field-body label {
+  display: block;
+  font-size: 12px;
+  color: #8793a5;
+  margin-bottom: 6px;
+}
+
+.goal-field-body input {
+  width: 100%;
+  border: none;
+  padding: 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: #172033;
+  font-family: inherit;
+  background: transparent;
+}
+
+.goal-field-body input:focus {
+  outline: none;
+}
+
+.goal-field-unit {
+  color: #b2bccb;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.goals-save {
+  width: auto;
+  padding: 12px 28px;
+}
+
+@media (max-width: 640px) {
+  .goals-grid,
+  .profile-grid,
+  .profile-select-grid {
+    grid-template-columns: 1fr;
+  }
+}
