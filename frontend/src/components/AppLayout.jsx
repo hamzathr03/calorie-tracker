@@ -69,6 +69,29 @@ export default function AppLayout() {
       <main className="main">
         <Outlet />
       </main>
+
+      <nav className="mobile-tabbar">
+        <NavLink to="/" end className={navClass}>
+          <LayoutDashboard size={21} />
+          <span>Home</span>
+        </NavLink>
+        <NavLink to="/food-diary" className={navClass}>
+          <Utensils size={21} />
+          <span>Diary</span>
+        </NavLink>
+        <NavLink to="/goals" className={navClass}>
+          <Target size={21} />
+          <span>Goals</span>
+        </NavLink>
+        <NavLink to="/progress" className={navClass}>
+          <TrendingUp size={21} />
+          <span>Progress</span>
+        </NavLink>
+        <a onClick={handleLogout} style={{ cursor: "pointer" }}>
+          <LogOut size={21} />
+          <span>Logout</span>
+        </a>
+      </nav>
     </div>
   );
 }
