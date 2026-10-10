@@ -1,4 +1,5 @@
 import { useEffect, useState, useCallback } from "react";
+import { Link } from "react-router-dom";
 import { Bell, Plus } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
 import { apiFetch } from "../lib/api";
@@ -127,16 +128,18 @@ export default function Dashboard() {
       <section className="summary-grid">
         <div className="calorie-card">
           <div>
-            <p>Calories remaining</p>
+            <p>{calorieGoal ? "Calories remaining" : "Calories today"}</p>
             {calorieGoal ? (
               <>
-                <h2>{summary.calories.remaining} <small>kcal</small></h2>
-                <span className="positive">{calorieConsumed} kcal consumed</span>
+                <h2>{Math.round(summary.calories.remaining)} <small>kcal</small></h2>
+                <span className="positive">{Math.round(calorieConsumed)} kcal consumed</span>
               </>
             ) : (
               <>
-                <h2>{calorieConsumed} <small>kcal</small></h2>
-                <span className="positive">Set a calorie goal to see remaining</span>
+                <h2>{Math.round(calorieConsumed)} <small>kcal</small></h2>
+                <Link to="/goals" className="positive" style={{ color: "inherit" }}>
+                  Set a calorie goal to see remaining →
+                </Link>
               </>
             )}
           </div>
